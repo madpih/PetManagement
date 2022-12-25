@@ -1,0 +1,28 @@
+<h1>Pet list</h1>
+<table class="table table-striped">
+    <thead>
+        <tr> 
+        <th>#</th>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Type</th>
+        <th>Color</th>
+        <th>Country</th>
+        <th></th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr></tr>
+            <tr *ngFor = "let pet of pets">
+                <td>{{ pet.id }}</td>
+                <td>{{ pet.name }}</td>
+                <td>{{ pet.code }}</td>
+                <td>{{ pet.type }}</td>
+                <td>{{ pet.color }}</td>
+                <td>{{ pet.country }}</td>
+                <td>
+                    <button (click) = "updatePet(pet.id)" class="btn btn-info">Update Pet data</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
