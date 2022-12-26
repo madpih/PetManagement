@@ -16,12 +16,6 @@ export class UpdatePetComponent implements OnInit {
      private route: ActivatedRoute,
      private router: Router) {}
 
-  // ngOnInit(): void {
-  //     this.id = this.route.snapshot.params['id'];
-  //     this.petService.getPetById(this.id).subscribe(data => {
-  //       this.pet = data;
-  //     }, error => console.log(error));
-  //   }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -31,13 +25,6 @@ export class UpdatePetComponent implements OnInit {
       complete: () => console.log("complete")
   })
 }
-
-// onSubmit(){
-//   this.petService.updatePet(this.id, this.pet).subscribe( data =>{
-//     this.goToPetList();
-//   }
-//   , error => console.log(error));
-// }
 
   onSubmit(){
     this.petService.updatePet(this.id, this.pet).subscribe({

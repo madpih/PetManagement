@@ -11,3 +11,7 @@
     opacity:0.9;
     width: 100%;
 }
+
+.invalid-input{
+    color:red;
+}

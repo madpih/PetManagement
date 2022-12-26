@@ -9,7 +9,7 @@ public class Pet implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
-    private Long id;
+    private Integer id;
     private String name;
     private String code;
     private String type; //muuda enumiks - type, enum saab olla public? public enum type?
@@ -19,7 +19,7 @@ public class Pet implements Serializable {
     public Pet() {
     }
 
-        public Pet(Long id, String name, String code, String type, String color, String country) {
+        public Pet(Integer id, String name, String code, String type, String color, String country) {
         this.id = id;
         this.name = name;
         this.code = code;
@@ -28,11 +28,11 @@ public class Pet implements Serializable {
         this.country = country;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
