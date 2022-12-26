@@ -35,13 +35,12 @@
             required maxlength="24">
                 <div *ngIf = "f.submitted && code.invalid" class = "invalid-input">
                     <div *ngIf = "code.errors?.['required']">Code is required</div>
-                    
                 </div>
         </div>
 
         <div class="form-group">
             <label>Type</label>
-            <input type="text"
+            <input type ="text"          
             class="form-control"
             id = "type"
             [(ngModel)] = "pet.type"
@@ -80,7 +79,7 @@
             [ngClass] = "{ 'is-invalid': f.submitted && country.invalid }"
             required>
                 <div *ngIf = "f.submitted && country.invalid" class = "invalid-input">
-                    <div *ngIf = "country.errors?.['required']">Color is required</div>
+                    <div *ngIf = "country.errors?.['required']">Country is required</div>
                 </div>
         </div>
         <button class="btn btn-success my-3" type="submit">Submit</button>

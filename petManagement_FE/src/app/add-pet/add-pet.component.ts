@@ -16,7 +16,7 @@ export class AddPetComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-  }
+    }
 
   savePet(){
     this.petService.addPet(this.pet).subscribe({

@@ -12,14 +12,14 @@ public class Pet implements Serializable {
     private Integer id;
     private String name;
     private String code;
-    private String type; //muuda enumiks - type, enum saab olla public? public enum type?
-    private String color;  //muuda enumiks -fur color, vt eelmist kommentaari
-    private String country; //muuda enumiks - Country
+    private String type;
+    private String color;
+    private String country;
 
     public Pet() {
     }
 
-        public Pet(Integer id, String name, String code, String type, String color, String country) {
+        public Pet(Integer id, String name, String code, String type, String color,String country) {
         this.id = id;
         this.name = name;
         this.code = code;
@@ -72,7 +72,7 @@ public class Pet implements Serializable {
         return country;
     }
 
-    public void setCountry(String country) {
+    public void setCountry (String country) {
         this.country = country;
     }
 

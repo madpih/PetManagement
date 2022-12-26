@@ -4,5 +4,5 @@ export class Pet {
     code: string;
     type: string;
     color: string;
-    country: string
+    country: string;
 }

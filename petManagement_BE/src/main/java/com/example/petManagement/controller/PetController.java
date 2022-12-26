@@ -2,7 +2,6 @@ package com.example.petManagement.controller;
 
 import com.example.petManagement.model.Pet;
 import com.example.petManagement.service.PetService;
-import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +25,7 @@ public class PetController {
         return new ResponseEntity<>(pets, HttpStatus.OK);
     }
 
-    @PostMapping("/add")
+   @PostMapping("/add")
     public ResponseEntity<Pet> addPet(@RequestBody Pet pet) {
         Pet newPet =  petService.addPet(pet);
         return new ResponseEntity<>(newPet,HttpStatus.CREATED);
@@ -43,5 +42,7 @@ public class PetController {
        Pet updatePet = petService.updatePet(pet);
        return new ResponseEntity<>(updatePet, HttpStatus.OK);
     }
+
+
 }
 
