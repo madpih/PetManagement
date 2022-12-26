@@ -1,5 +1,7 @@
+<div class="container">
+<div class="row">
 <div class="col-6 offset-md-3">
-    <h3>Update Pet data</h3>
+    <h2 class="my-4">Update Pet data</h2>
 
     <form name="form" #f="ngForm" (ngSubmit)= "f.form.valid && onSubmit()">
         <div class="form-group">
@@ -82,7 +84,9 @@
                     <div *ngIf = "country.errors?.['required']">Country is required</div>
                 </div>
         </div>
-        <button class="btn btn-success my-3" type="submit">Submit</button>
+        <button class="btn btn-success my-3 mx-3" type="submit">Submit</button>
     </form>
 
+</div>
+</div>
 </div>

@@ -1,8 +1,10 @@
+<div class="container">
+<div class="row">
 <div class="col-6 offset-md-3">
-    <h3>Add New Pet</h3>
+    <h2 class="my-4">Add New Pet</h2>
 
     <form name="form" #f="ngForm" (ngSubmit)= "f.form.valid && onSubmit()">
-        <div class="form-group">
+        <div class="form-group d-none">
             <label>Id</label>
             <input type="text" class="form-control" id = "id"
                 [(ngModel)] = "pet.id" name = "id" disabled >
@@ -15,6 +17,7 @@
                 id = "name"
                 [(ngModel)] = "pet.name"
                 name = "name"
+                placeholder ="Name"
                 #name = "ngModel"
                 [ngClass] = "{ 'is-invalid': f.submitted && name.invalid }"
                 required>
@@ -30,6 +33,7 @@
             id = "code"
             [(ngModel)] = "pet.code"
             name = "code"
+            placeholder ="Code"
             #code = "ngModel"
             [ngClass] = "{ 'is-invalid': f.submitted && code.invalid }"
             required maxlength="24">
@@ -41,7 +45,7 @@
         <div class="form-group">
             <label>Type</label>
             <input type ="text"          
-            class="form-control"
+            class = "form-control"
             id = "type"
             [(ngModel)] = "pet.type"
             name = "type"
@@ -59,7 +63,7 @@
             class="form-control"
             id = "color"
             [(ngModel)] = "pet.color"
-            name = "color"
+            name = "Fur color"
             #color="ngModel"
             [ngClass] = "{ 'is-invalid': f.submitted && color.invalid }"
             required>
@@ -82,7 +86,9 @@
                     <div *ngIf = "country.errors?.['required']">Country is required</div>
                 </div>
         </div>
-        <button class="btn btn-success my-3" type="submit">Submit</button>
+        <button class="btn btn-success my-3 mx-3" type="submit">Submit</button>
     </form>
 
+</div>
+</div>
 </div>
