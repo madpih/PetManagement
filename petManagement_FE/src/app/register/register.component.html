@@ -1,0 +1,70 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-6 offset-md-3 my-5">
+            <h2 class="my-4 text-center">User Registration</h2>
+            <button class="btn btn-info m-2" (click)="goToLogin()">Existing User? Go to login page</button>
+            <div class="mt-2">
+                <span class="text-danger">{{msg}}</span>
+                <form #regForm = "ngForm" (ngSubmit)="savePerson()">
+                    <div class="form-group d-none">
+                        <label>Id</label>
+                        <input type="text" class="form-control" id = "id"
+                        [(ngModel)] = "person.id" name = "id" disabled >
+                    </div>
+            
+                    <div class="form-group mt-3 mb-3">
+                        <label for="username">User Name</label>
+                        <input type="username" 
+                        class="form-control"
+                        id="username" placeholder="Enter username"
+                        name="username" 
+                        [(ngModel)]="person.username" required #username = "ngModel"
+                        [class.is-invalid] = "username.invalid && username.touched">
+                        <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required field</small>
+                    </div>   
+                   
+                    <div class="form-group mt-3 mb-3">
+                        <label for="email">Email address</label>
+                        <input type="email" 
+                        class="form-control"
+                        id="email" placeholder="Enter email"
+                        name="email" 
+                        [(ngModel)]="person.emailid" required #email = "ngModel"
+                        [class.is-invalid] = "email.invalid && email.touched">
+                        <div *ngIf="email.errors && (email.invalid && email.touched)">
+                            <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email address is required field</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="password">Password</label>
+                        <input type="password"
+                        class="form-control"
+                        id="password" 
+                        placeholder="Password"
+                        name="password" [(ngModel)]="person.password" required #password = "ngModel"
+                        [class.is-invalid] = "password.invalid && password.touched">
+                        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="password">Password</label>
+                        <input type="password" 
+                        class="form-control"
+                        id="cpassword"
+                        placeholder="Confirm Password"
+                        name="cpassword"
+                        (ngModel)="person.password" required #cpassword = "ngModel"
+                        [class.is-invalid] = "cpassword.invalid && cpassword.touched">
+                        <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched">Passwords have to match</small>
+                    </div>
+                    
+                    <button [disabled]="regForm.form.invalid" type="submit" class="btn btn-info m-2">Register </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    
+
