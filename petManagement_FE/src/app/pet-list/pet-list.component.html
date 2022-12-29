@@ -1,4 +1,11 @@
-<div class="container">
+<div class="container-fluid mt-5">
+<div class="row">
+<div class="col-8 offset-md-2 d-flex my-5">
+    <a [routerLink]="['/add-pet']" class="btn btn-front btn-lg">Add pet</a>
+    <a [routerLink]="['/login']" class=" btn btn-outline-dark ms-auto btn-lg">Logout</a>
+</div>
+</div>
+
 <div class="row">
 <div class="col-8 offset-md-2">
 <h2 class="my-4">All Pets</h2>
@@ -24,7 +31,7 @@
                 <td>{{ pet.color }}</td>
                 <td>{{ pet.country }}</td>
                 <td>
-                    <button (click) = "updatePet(pet.id)" class="btn btn-info">Update Pet data</button>
+                    <button (click) = "updatePet(pet.id)" class="btn btn-lg btn-outline-dark">Update Pet data</button>
                 </td>
             </tr>
         </tbody>

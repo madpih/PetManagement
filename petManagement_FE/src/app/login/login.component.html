@@ -1,8 +1,9 @@
 
-<div class="container mt-3">
+<div class="container">
     <div class="row">
-        <div class="col-6 offset-md-3 mb-3 mt-5">
-          <h2 class="my-4">Login</h2>
+        <div class="col-6 offset-md-3 mb-3">
+           <h1 class="my-5">Please <span class="login">LOGIN</span> to continue</h1>
+          
             <form #loginForm = "ngForm" (ngSubmit)="loginUser()">
                 <span class="text-danger">{{msg}}</span>
                 <div class="form-group mt-3 mb-3">
@@ -22,8 +23,8 @@
                 </div>
                 
 
-                <button type="submit" class="btn btn-info mt-3 float-start">Login </button>
-                <button type="submit" class="btn btn-info mt-3 float-end" (click)="gotoregistration()">New User? Signup here </button>
+                <button type="submit" class="btn btn-front mt-3 float-start btn-lg px-5">Login </button>
+                <button class="btn btn-outline-dark mt-3 float-end btn-lg" (click)="gotoregistration()">New User? Signup here </button>
               </form>
         </div>
     </div>

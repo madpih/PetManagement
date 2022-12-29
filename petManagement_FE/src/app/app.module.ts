@@ -18,7 +18,7 @@ import { RegisterComponent } from './register/register.component';
     AddPetComponent,
     UpdatePetComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

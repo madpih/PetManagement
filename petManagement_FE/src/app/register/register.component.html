@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-6 offset-md-3 my-5">
             <h2 class="my-4 text-center">User Registration</h2>
-            <button class="btn btn-info m-2" (click)="goToLogin()">Existing User? Go to login page</button>
+            <button class="btn btn-front my-3 p-3" (click)="goToLogin()">Existing User? Go to login page</button>
             <div class="mt-2">
                 <span class="text-danger">{{msg}}</span>
                 <form #regForm = "ngForm" (ngSubmit)="savePerson()">
@@ -47,7 +47,7 @@
                         <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
                     </div>
 
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-2">
                         <label for="password">Password</label>
                         <input type="password" 
                         class="form-control"
@@ -59,7 +59,7 @@
                         <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched">Passwords have to match</small>
                     </div>
                     
-                    <button [disabled]="regForm.form.invalid" type="submit" class="btn btn-info m-2">Register </button>
+                    <button [disabled]="regForm.form.invalid" type="submit" class="btn btn-outline-dark px-5 m-3">Register </button>
                 </form>
             </div>
 

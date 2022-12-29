@@ -1,4 +1,11 @@
-<div class="container">
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6 offset-md-3 d-flex my-5">
+            <a [routerLink]="['/pets']" class="btn btn-outline-dark btn-lg">Pet List</a>
+            <a [routerLink]="['/login']" class=" btn btn-front ms-auto btn-lg">Logout</a>
+        </div>
+    </div>
+
 <div class="row">
 <div class="col-6 offset-md-3">
     <h2 class="my-4">Update Pet data</h2>
@@ -84,7 +91,7 @@
                     <div *ngIf = "country.errors?.['required']">Country is required</div>
                 </div>
         </div>
-        <button class="btn btn-success my-3 mx-3" type="submit">Submit</button>
+        <button class="btn btn-front my-3 mx-3 btn-lg px-3" type="submit">Submit</button>
     </form>
 
 </div>

@@ -4,6 +4,7 @@ import { Person } from '../person';
 import { RegistrationService } from '../registration.service';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html', 
@@ -14,12 +15,12 @@ export class LoginComponent implements OnInit {
   
   person: Person = new Person();
   msg='';
-  constructor(private service: RegistrationService,private router: Router ){
- 
-  }
+  constructor(private service: RegistrationService,
+    private router: Router,
+    ) {}
 
   ngOnInit(){
-
+    
   }
       
   loginUser(){

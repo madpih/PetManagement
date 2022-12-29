@@ -14,9 +14,10 @@ export class PetListComponent implements OnInit {
    pets: Pet[];
 
   constructor(private petService: PetService,
-    private router: Router) {}
+    private router: Router,) {}
 
   ngOnInit():void{
+    
     this.getPets();
   }
 

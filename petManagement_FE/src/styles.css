@@ -5,19 +5,24 @@
 html, body{
 font-family: 'Oswald', sans-serif;
 letter-spacing: 2px;
+
+}
+
+.title{
+    font-size: 4rem;
 }
 
 input {
     letter-spacing: 2px;
 }
 
-h2 {
+h2, .login {
 color:#FF6D0A;
 
 }
 
-.nav-link{
-font-size: 1.5rem;
+h2{
+font-size: 2.5rem;
 
 }
 .footer{
@@ -48,4 +53,26 @@ label{
 form{
     border: solid 1px #003333;
    
+}
+
+table, form{
+    font-size: 1.3rem;
+}
+
+.btn-front{
+    color:#FF6D0A;
+    background-color: black;
+    letter-spacing: 2px;
+}
+
+.btn-dark{
+    
+   color:#FF6D0A !important;
+   border: solid 1px black;
+   letter-spacing: 2px;
+}
+
+.btn-outline-dark{
+color:#FF6D0A !important;
+letter-spacing: 2px;
 }
